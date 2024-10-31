@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-body">
+            <h2>Contact Me</h2>
+            <p><strong>Phone Number:</strong> {{ portfolio.phone_number }}</p>
+            <p><strong>Email:</strong> <a href="mailto:{{ portfolio.email }}">{{ portfolio.email }}</a></p>
+            <p><strong>GitHub:</strong> <a href="{{ portfolio.github }}" target="_blank">{{ portfolio.github }}</a></p>
+            <p><strong>LinkedIn:</strong> <a href="{{ portfolio.linkedin }}" target="_blank">{{ portfolio.linkedin }}</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

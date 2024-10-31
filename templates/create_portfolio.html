@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Create Your Portfolio</h2>
+    <form action="{{ url_for('create_portfolio') }}" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" required>
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" class="form-control" id="phone_number" name="phone_number" required>
+        </div>
+        <div class="form-group">
+            <label for="profile_picture">Profile Picture:</label>
+            <input type="file" class="form-control-file" id="profile_picture" name="profile_picture">
+        </div>
+        <div class="form-group">
+            <label for="short_bio">Short Bio:</label>
+            <textarea class="form-control" id="short_bio" name="short_bio" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="skills">Skills:</label>
+            <textarea class="form-control" id="skills" name="skills" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="linkedin">LinkedIn:</label>
+            <input type="url" class="form-control" id="linkedin" name="linkedin">
+        </div>
+        <div class="form-group">
+            <label for="github">GitHub:</label>
+            <input type="url" class="form-control" id="github" name="github">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}
+

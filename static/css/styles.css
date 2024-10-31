@@ -1,0 +1,28 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    background-image: url("/static/background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.jumbotron {
+    background-color: transparent !important;  /* Ensure the background is transparent */
+    border: none;
+}
+
+.welcome-text {
+    text-align: center;
+    font-size: 2em;
+}
+

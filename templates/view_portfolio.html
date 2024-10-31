@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-body">
+            <h2>{{ portfolio.first_name }} {{ portfolio.last_name }}</h2>
+            {% if portfolio.profile_picture %}
+                <img src="{{ url_for('static', filename='uploads/' + portfolio.profile_picture.split('/')[-1]) }}" alt="Profile Picture" class="img-thumbnail mb-3">
+            {% endif %}
+            <p class="card-text">{{ portfolio.short_bio }}</p>
+            <p><strong>Skills:</strong> {{ portfolio.skills }}</p>
+            <p><strong>LinkedIn:</strong> <a href="{{ portfolio.linkedin }}" target="_blank">{{ portfolio.linkedin }}</a></p>
+            <p><strong>GitHub:</strong> <a href="{{ portfolio.github }}" target="_blank">{{ portfolio.github }}</a></p>
+            <a class="btn btn-primary" href="{{ url_for('contact_me', portfolio_id=portfolio.id) }}">Contact Me</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

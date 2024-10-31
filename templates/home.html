@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="bg">
+    <div class="jumbotron welcome-text">
+        <h1 class="display-4">Welcome to My Portfolio Builder</h1>
+        <p class="lead">Create and Showcase Your Professional Portfolio</p>
+        <a class="btn btn-primary btn-lg" href="{{ url_for('create_portfolio') }}" role="button">Create Your Portfolio</a>
+    </div>
+</div>
+{% endblock %}
+
